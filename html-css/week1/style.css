@@ -1,0 +1,225 @@
+body {
+    background-image: url(https://i.ibb.co/sqmWp5K/1-fm87f-Alu-Zi8-Zt-S231kgw1g.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+}
+
+.infobox {
+    background-color: rgb(9, 9, 31);
+    color: white;
+    opacity: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    transition: 1s;
+    margin: 0;
+}
+
+#edu:hover~#education {
+    opacity: 0.9;
+    margin: -110px 0 0 0;
+}
+
+#workbutton:hover~#work {
+    opacity: 0.9;
+    margin: -140px 0 0 0;
+}
+
+#skillbutton:hover~#skills {
+    opacity: 0.9;
+    margin: -265px 0 0 0;
+}
+
+
+
+.head {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.pic {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.picholder {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 100px;
+}
+
+.headtext {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 20em;
+    margin: 0 100px 0 0;
+}
+
+button {
+    display: inline-block;
+    background-color: rgb(9, 9, 31);
+    border-radius: 10px;
+    border: 4px solid gray;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 1)
+}
+
+button {
+    display: inline-block;
+    background-color: rgb(9, 9, 31);
+    border-radius: 10px;
+    border: 4px solid gray;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 1)
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: pink;
+    color: rgb(9, 9, 31);
+}
+
+button:hover span {
+    padding-right: 30px;
+}
+
+#mainbutton:focus+.navholder {
+    opacity: 1;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.navholder {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 30px 0 0 0;
+    opacity: 0;
+    transition: 2s;
+}
+
+/*.nav{
+background-color: pink;
+text-decoration:none;
+color:rgb(9, 9, 31);
+text-align:center;
+align-items:center;
+justify-content:center;
+padding:20px;
+border-radius: 10px;
+border: 2px solid white;
+  font-size:15px;
+}*/
+/*.navholder a:hover{
+background-color: #ddd;
+color:  rgb(9, 9, 31);
+border:2px solid  gray;
+}*/
+
+.symbol {
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(9, 9, 31);
+    border-radius: 10px;
+    margin: 20px;
+    opacity: 0.5;
+}
+
+.fab {
+    color: white;
+    text-shadow: 3px 1px 2px red;
+    margin: 5px 0 0 0px;
+    font-size: 80px;
+}
+
+.fas {
+    color: white;
+    text-shadow: 3px 1px 2px red;
+    border-radius: 10px;
+    margin: 0 0 0 20px;
+    font-size: 50px;
+}
+
+.contactstyle {
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 40px 10px 40px;
+}
+
+.columnflex {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowflex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.icon {
+    margin: 0 10px 0 10px;
+}
+
+i:hover {
+    color: gray;
+}
+
+.symbol:hover {
+    opacity: 1;
+}
+
+/*.navholder span:focus + .transparentbox{
+  opacity:1;
+}*/
