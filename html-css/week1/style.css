@@ -23,6 +23,27 @@ body {
     transition: 1s;
     margin: 0;
 }
+.headtext1{
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(9, 9, 31);
+    padding:20px;
+    border-radius:10px;
+}
+.text-headtext{
+    text-shadow: 2px 2px 8px  red;
+    line-height: 0;
+}
+#subtitle{
+    letter-spacing: 5px;
+    margin:-35px 0 0 0;
+    line-height: 0;
+}
+.text-header{
+    font-size: 20px;
+    
+    line-height: 30px;
+}
 
 #edu:hover~#education {
     opacity: 0.9;
@@ -145,25 +166,6 @@ button:hover span:after {
     opacity: 0;
     transition: 2s;
 }
-
-/*.nav{
-background-color: pink;
-text-decoration:none;
-color:rgb(9, 9, 31);
-text-align:center;
-align-items:center;
-justify-content:center;
-padding:20px;
-border-radius: 10px;
-border: 2px solid white;
-  font-size:15px;
-}*/
-/*.navholder a:hover{
-background-color: #ddd;
-color:  rgb(9, 9, 31);
-border:2px solid  gray;
-}*/
-
 .symbol {
     display: flex;
     flex-flow: column;
@@ -172,7 +174,11 @@ border:2px solid  gray;
     margin: 20px;
     opacity: 0.5;
 }
-
+.symbol-holder{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
 .fab {
     color: white;
     text-shadow: 3px 1px 2px red;
@@ -219,7 +225,9 @@ i:hover {
 .symbol:hover {
     opacity: 1;
 }
-
-/*.navholder span:focus + .transparentbox{
-  opacity:1;
-}*/
+.paragraph{
+    font-family:'Courier New', Courier, monospace;
+    font-size:20px;
+    margin:0 50px 0 0;
+    color:white;
+}
