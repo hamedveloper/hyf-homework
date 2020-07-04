@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.boxes {
+    height: 50px;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+/*Header section******************************************************************************/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 7em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBDCDD;
+    border: 1.3px solid rgba(119, 120, 122, 0.3);
+}
+
+.navigation {
+    width: 30em;
+}
+
+/*Sign up description section*****************************************************************/
+.sign-up {
+    width: 65%;
+    margin: 30px 0 0 0;
+}
+
+section.sign-up h1 {
+    font-size: 40px;
+}
+
+/*Progress bar section*************************************************************************/
+
+progress[value] {
+    /*remove default format for safari and chrome*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /*remove default format for mozila firefox*/
+    border: none;
+
+    /*dimensions*/
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+
+    /*for IE10*/
+    color: blue;
+}
+
+/*styling in Safari and Google Chrom*/
+
+progress[value]::-webkit-progress-bar {
+    background-color: white;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #DBDCDD;
+    border-right: 1.5px solid rgba(119, 120, 122, 0.75);
+
+    -webkit-transition: width 5s ease;
+    -moz-transition: width 5s ease;
+    -o-transition: width 5s ease;
+    transition: width 5s ease;
+}
+
+/*Styling progress bar for firefox*/
+
+progress[value]::-moz-progress-bar {
+    background-color: white;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+/*get information section********************************************************************/
+
+.chbox {
+    width: 40px;
+    height: 40px;
+}
+
+.inbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7px;
+}
+
+form,
+.holder {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin: 50px 0px 10px 0;
+    font-weight: bolder;
+
+}
+
+form.interest {
+    margin-left: 80px;
+}
+
+.info-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: right;
+    margin-left: 60px;
+}
+
+.info-left {
+    display: flex;
+    flex: 0.6;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+/*Images holder and selection section****************************************/
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    width: 14em;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: -30px;
+}
+
+.img {
+    width: 86%;
+}
+
+.holder-bot {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+button {
+    width: 23%;
+    height: 90px;
+    background-color: rgba(119, 120, 122, 0.3);
+    color: black;
+    float: right;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: 30px;
+}

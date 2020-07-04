@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style4.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!----------------------------Header section------------------------->
+    <header>
+        <div class="logo">Logo</div>
+        <div class="navigation logo">Navigation</div>
+    </header>
+
+
+    <!----------------------------Sign up description section--------------->
+    <section class="sign-up">
+        <h1>Sign Up to yourcustomtailor.com</h1>
+    </section>
+
+    <!---------------------------Progress bar section---------------------->
+    <section class="progress-bar">
+        <h1>Step 2/4-How can we reach you?</h1>
+        <strong>Progress</strong>
+        <progress max="100" value="30"></progress>
+        <p>We probably need to stay in touch somehow. Let is know how we can reach you?</p>
+    </section>
+
+    <!----------------------------getting information about email and password-------------->
+
+    <form action="">
+        <div class="info-left">
+            <div>
+                <label for="email">Email*</label>
+                <input class="fname boxes" type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="pass">Password*</label>
+                <input class="fname boxes" type="password" id="pass" name="pass" required>
+            </div>
+            <div>
+                <label for="repass">Re-enter password*</label>
+                <input class="fname boxes" type="password" id="repass" name="repass" required>
+            </div>
+
+        </div>
+
+
+        <div class="info-right">
+            <div>
+                <label for="phone">Phone</label>
+                <input class="fname boxes" type="tel" id="phone" name="phone">
+            </div>
+        </div>
+    </form>
+
+    <!-----------------------------------Newsletter section--------------------------------->
+    <section class="newsletter">
+        <p>I want to sign-up for the newsletter</p>
+
+        <form class="newsform" action="">
+
+            <div class="newsbox newsbox1">
+                <label class="label-news" for="Weekly-news">Weekly-news</label>
+                <div class="input-box"><input id="Weekly-news" type="radio" name="news" class="input-c" checked></div>
+            </div>
+
+            <div class="newsbox newsbox1">
+                <label class="label-news" for="Month-news">Monthly news</label>
+                <div class="input-box"><input id="Month-news" type="radio" name="news" class="input-c"></div>
+            </div>
+
+            <div class="newsbox">
+                <label class="label-news" for="no-news">Don't send me news</label>
+                <div class="input-box"><input id="no-news" type="radio" name="news" class="input-c"></div>
+            </div>
+
+        </form>
+
+    </section>
+    <a href="index5.html"><button class="button">Next step</button></a>

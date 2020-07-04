@@ -1,0 +1,213 @@
+/*body****************************************************************************************/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.boxes {
+    height: 50px;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+/*Header section******************************************************************************/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 7em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBDCDD;
+    border: 1.3px solid rgba(119, 120, 122, 0.3);
+}
+
+.navigation {
+    width: 30em;
+}
+
+/*Sign up description section*****************************************************************/
+.sign-up {
+    width: 65%;
+    margin: 30px 0 30px 0;
+    line-height: 30px;
+}
+
+section.sign-up h1 {
+    font-size: 40px;
+}
+
+/*Progress bar section*************************************************************************/
+.progress-bar {
+    margin: 30px 0 0 0;
+    line-height: 30px;
+}
+
+progress[value] {
+    /*remove default format for safari and chrome*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /*remove default format for mozila firefox*/
+    border: none;
+
+    /*dimensions*/
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+
+    /*for IE10*/
+    color: blue;
+}
+
+/*styling in Safari and Google Chrom*/
+
+progress[value]::-webkit-progress-bar {
+    background-color: white;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #DBDCDD;
+    border-right: 1.5px solid rgba(119, 120, 122, 0.75);
+
+    -webkit-transition: width 5s ease;
+    -moz-transition: width 5s ease;
+    -o-transition: width 5s ease;
+    transition: width 5s ease;
+}
+
+/*Styling progress bar for firefox*/
+
+progress[value]::-moz-progress-bar {
+    background-color: white;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+/*get information section********************************************************************/
+
+.fname {
+    width: 60%;
+}
+
+.Country {
+    width: 57%;
+    background-color: white;
+    margin: 30px 0 30px 0;
+}
+
+.country-part {
+    padding-right: 60px;
+}
+
+form,
+.holder {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: 50px 0px 50px 0;
+    font-weight: bolder;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.info-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    text-align: right;
+}
+
+/*shipping address section*************************************************************************/
+
+.text-shipping {
+    font-weight: bolder;
+    margin: 30px 0 30px 20px;
+    display: inline-flex;
+}
+
+#shipping {
+    height: 30px;
+    width: 30px;
+}
+
+.ship-address {
+    display: none;
+    transition: 1s ease-in-out;
+    margin-top: 50px;
+    width: 100%;
+}
+
+#shipping:checked~.ship-address {
+    display: block;
+}
+
+form.ship {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 50px 0;
+    font-weight: bolder;
+}
+
+#description {
+    flex: 6.3;
+    height: 180px;
+    border: 2px solid rgba(119, 120, 122, 0.75);
+}
+
+.class5-page1 {
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    margin: 20px;
+
+}
+
+.class6-page1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.italic-font {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: 40px;
+}
+
+button {
+    width: 23%;
+    height: 90px;
+    background-color: rgba(119, 120, 122, 0.3);
+    color: black;
+    float: right;
+    font-size: 25px;
+    text-decoration: none;
+}
