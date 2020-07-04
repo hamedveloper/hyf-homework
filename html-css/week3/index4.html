@@ -40,11 +40,13 @@
 
             <div>
                 <label for="pass">Password*</label>
-                <input class="fname boxes" type="password" id="pass" name="pass" required>
+                <input class="fname boxes" type="password" id="pass" name="pass" pattern="(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                    required>
             </div>
             <div>
                 <label for="repass">Re-enter password*</label>
-                <input class="fname boxes" type="password" id="repass" name="repass" required>
+                <input class="fname boxes" type="password" id="repass" name="repass"
+                    pattern="(?=.*[a-z])(?=.*[A-Z]).{10,}" required>
             </div>
 
         </div>

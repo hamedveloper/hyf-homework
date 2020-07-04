@@ -49,7 +49,8 @@
             </div>
             <div>
                 <label for="cnumber">Credit card number</label>
-                <input class="fname boxes" type="tel" id="cnumber" name="cnumber">
+                <input class="fname boxes" type="tel" id="cnumber" name="cnumber" pattern="[0-9\s]{13,19}"
+                    inputmode="numeric" maxlength="19">
             </div>
             <div class="expiry">
                 <div>
