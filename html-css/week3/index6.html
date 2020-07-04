@@ -50,7 +50,7 @@
             <div>
                 <label for="cnumber">Credit card number</label>
                 <input class="fname boxes" type="tel" id="cnumber" name="cnumber" pattern="[0-9\s]{13,19}"
-                    inputmode="numeric" maxlength="19">
+                    inputmode="numeric" minlength="16" maxlength="16">
             </div>
             <div class="expiry">
                 <div>
@@ -64,7 +64,8 @@
             </div>
             <div class="cvv">
                 <label for="ccv">CCV</label>
-                <input class="exbox boxes" type="number" id="ccv" name="ccv">
+                <input class="exbox boxes" type="number" id="ccv" name="ccv" pattern="[0-9\s]{3,3}" inputmode="numeric"
+                    minlength="3" maxlength="3">
             </div>
 
         </div>
