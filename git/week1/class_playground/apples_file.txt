@@ -1,1 +1,2 @@
 I am apple
+second line is better than first one
