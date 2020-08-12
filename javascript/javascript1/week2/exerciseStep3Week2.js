@@ -30,10 +30,16 @@ const weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 function getEventWeekday(i) {
     if (i >= 7) {
         return ((i % 7) + n) - 1;
+    } else if ((i + n) === 7) {
+        return 6;
     } else {
         return ((i + n) % 7) - 1;
     }
 }
+
+console.log(weekday[getEventWeekday(2)]);
+
+
 
 
 //Weather wear//////////////////////////////////////////////////////////////////
@@ -103,7 +109,7 @@ const boughtCandyPrices = [];
 
 function addCandy(candyType, weight) {
     if (candyType === 'Sweet') {
-        var pricePerGram = 0.5;
+        const pricePerGram = 0.5;
     } else if (candyType === 'Chocolate') {
         pricePerGram = 0.7;
     } else if (candyType === 'Toffee') {
@@ -111,7 +117,7 @@ function addCandy(candyType, weight) {
     } else if (candyType === 'Chewing-gum') {
         pricePerGram = 0.03;
     }
-    var fee = pricePerGram * weight;
+    const fee = pricePerGram * weight;
     boughtCandyPrices.push(fee);
 }
 
@@ -119,13 +125,13 @@ addCandy('Sweet', 10);
 addCandy('Sweet', 20);
 addCandy('Toffee', 30);
 
-var total = 0;
+let total = 0;
 for (i = 0; i < boughtCandyPrices.length; i++) {
     total = boughtCandyPrices[i] + total;
 }
 console.log('total= ' + total);
 
-var amountToSpend = Math.random() * 100;
+let amountToSpend = Math.random() * 100;
 console.log(`You have ${amountToSpend} to buy candy in total`)
 
 function canBuyMoreCandy() {
