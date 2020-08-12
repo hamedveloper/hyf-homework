@@ -25,15 +25,19 @@ console.log(fullName2);
 //"i" is the parameter for how many day we have until to the event
 
 const n = new Date().getDay();
-const weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+const weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 function getEventWeekday(i) {
     if (i >= 7) {
         return ((i % 7) + n) - 1;
+    } else if ((i + n) === 7) {
+        return 6;
     } else {
         return ((i + n) % 7) - 1;
     }
-}
+};
+
+console.log(weekday[getEventWeekday(4)]);
 
 
 //Weather wear//////////////////////////////////////////////////////////////////
