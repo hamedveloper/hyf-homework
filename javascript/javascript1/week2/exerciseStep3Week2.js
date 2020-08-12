@@ -109,7 +109,7 @@ const boughtCandyPrices = [];
 
 function addCandy(candyType, weight) {
     if (candyType === 'Sweet') {
-        const pricePerGram = 0.5;
+        var pricePerGram = 0.5;
     } else if (candyType === 'Chocolate') {
         pricePerGram = 0.7;
     } else if (candyType === 'Toffee') {
@@ -117,7 +117,7 @@ function addCandy(candyType, weight) {
     } else if (candyType === 'Chewing-gum') {
         pricePerGram = 0.03;
     }
-    const fee = pricePerGram * weight;
+    let fee = pricePerGram * weight;
     boughtCandyPrices.push(fee);
 }
 
