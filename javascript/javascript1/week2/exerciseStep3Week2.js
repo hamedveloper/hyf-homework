@@ -56,7 +56,7 @@ function weatherTemprature(temp) {
 
 //Student Manager/////////////////////////////////////////////////////////////////
 
-var class07Students = [];
+const class07Students = [];
 
 function addStudentToClass(studentName) {
     if (studentName !== '') {
@@ -115,7 +115,7 @@ function addCandy(candyType, weight) {
     } else if (candyType === 'Chewing-gum') {
         pricePerGram = 0.03;
     }
-    var fee = pricePerGram * weight;
+    let fee = pricePerGram * weight;
     boughtCandyPrices.push(fee);
 }
 
@@ -123,13 +123,13 @@ addCandy('Sweet', 10);
 addCandy('Sweet', 20);
 addCandy('Toffee', 30);
 
-var total = 0;
-for (i = 0; i < boughtCandyPrices.length; i++) {
+let total = 0;
+for (let i = 0; i < boughtCandyPrices.length; i++) {
     total = boughtCandyPrices[i] + total;
 }
 console.log('total= ' + total);
 
-var amountToSpend = Math.random() * 100;
+let amountToSpend = Math.random() * 100;
 console.log(`You have ${amountToSpend} to buy candy in total`)
 
 function canBuyMoreCandy() {
