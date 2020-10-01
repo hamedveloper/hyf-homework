@@ -10,19 +10,6 @@ const load = document.getElementById('loadingBar')
 const content = document.querySelector('#content')
 const cloud = document.querySelector('#cloud')
 
-
-
-// function selectCity() {
-//     const city = cityInput.value;
-//     if (city) {
-//         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b33af74225294d0f38ecf99fd7eaca9a`)
-//             .then((response) => response.json()
-//                 .then((data) => {
-//                     load.innerHTML = 'loading';
-//                     console.log(data)
-//                 }))
-//     }
-// }
 async function selectCity() {
     const city = cityInput.value;
     try {
@@ -43,6 +30,4 @@ async function selectCity() {
     } catch {
         console.log('fail to load...');
     }
-
-
 }
