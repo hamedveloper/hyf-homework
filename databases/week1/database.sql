@@ -1,11 +1,11 @@
 --1.Find out how many tasks are in the task table
 
-SELECT COUNT(*)
-FROM HYF.task;
+SELECT COUNT(*) AS tasks_count
+FROM task;
 
 --.Find out how many tasks in the task table do not have a valid due date
 
-SELECT COUNT(*)
+SELECT COUNT(*) AS No_valid_due_date
 FROM task
 WHERE due_date IS NULL;
 
