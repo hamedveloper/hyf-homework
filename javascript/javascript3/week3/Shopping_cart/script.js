@@ -27,10 +27,7 @@ class Product {
         fetch('https://api.exchangeratesapi.io/latest?base=DKK')
             .then(response => response.json())
             .then(data => {
-                if (x === 'EUR') console.log(`Price for ${this.name} in ${x} is ${(data.rates.EUR * this.price).toFixed(2)}`)
-                if (x === 'USD') console.log(`Price for ${this.name} in ${x} is ${(data.rates.USD * this.price).toFixed(2)}`)
-                if (x === 'CAD') console.log(`Price for ${this.name} in ${x} is ${(data.rates.CAD * this.price).toFixed(2)}`)
-                if (x === 'AUD') console.log(`Price for ${this.name} in ${x} is ${(data.rates.EUR * this.price).toFixed(2)}`)
+                console.log(`Price for ${this.name} in ${x} is ${(data.rates[x] * this.price).toFixed(2)}`)
             })
     }
 }
