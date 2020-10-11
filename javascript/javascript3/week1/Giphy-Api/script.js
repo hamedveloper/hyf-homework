@@ -5,34 +5,22 @@ const pictureBox = document.getElementById('pictureBox')
 
 getGifBtn.addEventListener('click', onClickSearch)
 
-getNumber.addEventListener('input', onClickSearch)
+getNumber.addEventListener('input', onClickSearch1)
 
 const giphyData = async (searchKey, searchNumber) => {
 const API_KEY = "92CWtdMWMOYaLWV6sKMC3WZgM6grBT4l";
-    const data = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchKey}&limit=${searchNumber}&offset=0&rating=g&lang=en`)
-        .then((response) => response.json());
+    const data = await (await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchKey}&limit=${searchNumber}&offset=0&rating=g&lang=en`)).json();
 return data;
 };
 
-
-
-
-
-
 async function onClickSearch() {
-
     pictureBox.innerHTML = '';
 
     let search = searchKey.value;
 
-    console.log(giphyData(search, 50))
-    //let image = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=92CWtdMWMOYaLWV6sKMC3WZgM6grBT4l&q=${search}&limit=50&offset=0&rating=g&lang=en`)
-    //let imageFinal = await image.json()
-
-    //console.log(imageFinal);
+    let giphyPictures = giphyData(search, 50)
 
     for (let i = 0; i < 50; i++) {
-
 
         let ul = document.createElement('ul')
 
@@ -40,21 +28,19 @@ async function onClickSearch() {
 
         let picHolder = document.createElement('img')
 
-        picHolder.src = giphyData(search, 50).data[i].images.downsized.url;
+        picHolder.src = (await giphyPictures).data[i].images.downsized.url;
         ul.appendChild(picHolder)
     }
 }
 
-async function giphy1() {
+async function onClickSearch1() {
 
     pictureBox.innerHTML = '';
 
     let search = searchKey.value;
     let number = getNumber.value;
-    console.log(number);
 
-    let image = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=92CWtdMWMOYaLWV6sKMC3WZgM6grBT4l&q=${search}&limit=${number}&offset=0&rating=g&lang=en`)
-    let imageFinal = await image.json()
+    let giphyPictures1 = giphyData(search, number)
 
     for (let i = 0; i < number; i++) {
         let ul = document.createElement('ul')
@@ -62,7 +48,7 @@ async function giphy1() {
         pictureBox.appendChild(ul)
         let picHolder = document.createElement('img')
 
-        picHolder.src = imageFinal.data[i].images.downsized.url;
+        picHolder.src = (await giphyPictures1).data[i].images.downsized.url;
         ul.appendChild(picHolder)
     }
 
