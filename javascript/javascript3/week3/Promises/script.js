@@ -1,13 +1,6 @@
 //////////////////////////////////////////////////////Getting into promises
-
-
-
-// Promise.all(requests)
-//     .then(responses => {
-//         // all responses are resolved successfully
-//         responses.forEach(response => response.jcon())
-//     })
-const ul = document.querySelector('ul');
+const body = document.querySelector('body');
+const ul = document.getElementById('uList');
 
 
 class Classmates {
@@ -25,12 +18,7 @@ class Classmates {
                 users.forEach(user => {
                     let userName = user.items[0].owner.login;
                     let div = document.createElement('div')
-                    div.style.fontSize = '20px';
-                    div.style.fontStyle = 'italic';
-                    div.style.margin = '20px 0 20px 0';
-                    div.style.textShadow = '7px 2px 10px blue';
-                    div.style.fontWeight = 'bold';
-
+                    div.style.cssText = "font-size:20px;font-style:italic;margin:20px 0 20px 0;font-weight:bold;text-shadow:7px 2px 10px blue";
                     div.innerHTML = `${userName}'s repositories: `;
                     ul.appendChild(div)
                     let items1 = user.items;
@@ -38,7 +26,6 @@ class Classmates {
                         let classmatesName = document.createElement('li')
                         ul.appendChild(classmatesName)
                         classmatesName.innerHTML = `${x.name}: ${x.url}`
-
                     });
                 })
             })
