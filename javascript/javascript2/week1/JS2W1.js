@@ -15,30 +15,32 @@ console.log(findTheShortest(danishWords));
 
 ///////////////////////////////////////////////////////////////////////Find and count the Danish letters
 
-function findDanishLetters(danish) {
-    let total = 0;
-    let å = 0;
-    let æ = 0;
-    let ø = 0;
 
-    for (let i = 0; i < danish.length; i++) { //Search inside the string sentnecse 
-        let word = danish.substring(i, i + 1);
-        if (word === 'å') {
-            å++;
-        } else if (word === 'æ') {
-            æ++;
-        } else if (word === 'ø') {
-            ø++;
+
+function findDanishLetters(danish) {
+    const danishLetters = {
+  "å": 0, 
+  "æ": 0,
+  "ø": 0
+}
+    for (let i = 0; i < danish.length; i++) {  
+        let letter = danish.substring(i, i + 1);
+        if (letter === 'å') {
+            (danishLetters.å)++;
+        } else if (letter === 'æ') {
+            (danishLetters.æ)++;
+        } else if (letter === 'ø') {
+            (danishLetters.ø)++;
         }
     };
-    console.log(`total: ${å+æ+ø}, å:${å}, ø:${ø}, æ:${æ}`);
+    return `total: ${(danishLetters.å)+(danishLetters.æ)+(danishLetters.ø)}, å: ${danishLetters.å}, ø: ${danishLetters.ø}, æ:${danishLetters.æ}`;
 };
 
 const danishString = 'Jeg har en blå bil';
-findDanishLetters(danishString); // returns {total: 1, å: 1}
+console.log(findDanishLetters(danishString)); 
 
 const danishString2 = 'Blå grød med røde bær';
-findDanishLetters(danishString2); // returns {total: 4, æ: 1, ø: 2, å: 1}
+console.log(findDanishLetters(danishString2));
 
 //////////////////////////////////////////////////////////////////Spirit animal name generator
 
