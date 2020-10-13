@@ -1,7 +1,7 @@
+
 console.log("Script loaded");
 
 let products = getAvailableProducts();
-
 
 function renderProducts(products) {
     // your code here
