@@ -8,14 +8,14 @@ function getReply(command) {
         return 'Please tell me just once your information';
 
     } else if (command === 'Hello my name is Hamed') {
-        myName = command.split(" ");
-        return 'nice to meet you ' + myName[4];
+        myName = command.split(" ")[4];
+        return 'nice to meet you ' + myName;
 
     } else if (command === 'Hello my name is') {
         return 'Please tell your name'
 
     } else if (command === 'What is my name?') {
-        return myName[4];
+        return myName;
 
     } else if (command === 'add fishing to my todo') {
 
