@@ -4,8 +4,12 @@ let splitTitles = movies.map(x => x.title.split(' '));
 console.log(movies);
 
 let specialTitles = splitTitles.map((oneSplitedTitle, index) => {
-    let hasDoubledWord = oneSplitedTitle.map((word, index1) => oneSplitedTitle.indexOf(word) != index1 && index1);
-    let evaluationResult = hasDoubledWord.filter(hasDoubledWord => hasDoubledWord == false ? false : true)
+    let DoubledWord = oneSplitedTitle.map((word, index) => {
+        if ((oneSplitedTitle.indexOf(word)) !== index){
+            return index;
+        }
+})
+    let evaluationResult = DoubledWord.filter(doubledWord => doubledWord)
     if (evaluationResult.length == 0) {
         return (false)
     } else {
