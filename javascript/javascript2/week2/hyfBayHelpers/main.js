@@ -14,50 +14,79 @@ function renderProducts(products) {
 }
 renderProducts(products);
 
-/////////////////////////////////////////////////////User wants to search for some product
+// /////////////////////////////////////////////////////User wants to search for some product
 
 let nameOfProduct = products.map(product => product.name);
 
-function writeInput() {
+function getResult() {
+    
+    let inputPrice = document.getElementById('price').value;
 
     let inputName = document.getElementById('product').value;
-    let resultSearch1 = products
-        .filter(product => product.name.toLowerCase().includes(inputName));
 
-    let productListUL = document.querySelector('ul');
-    productListUL.remove();
+    if (inputName !== '' && inputPrice=='') {
+        let resultSearchProduct = products
+            .filter(product => product.name.toLowerCase().includes(inputName));
 
-    let ul = document.createElement('ul');
-    let bodyElement = document.querySelector('body');
-    bodyElement.appendChild(ul)
+        let productListUL = document.querySelector('ul');
+        productListUL.remove();
 
-    renderProducts(resultSearch1);
-    return resultSearch1;
+        let ul = document.createElement('ul');
+        let bodyElement = document.querySelector('body');
+        bodyElement.appendChild(ul)
+
+        renderProducts(resultSearchProduct);
+    
+    } else if (inputPrice !== '' && inputName=='') {
+    
+        let resultSearch = products
+            .filter((product) => {
+                if (inputPrice === '') {
+                    return true;
+                } else {
+                    return (product.price < inputPrice)
+                }
+            });
+
+        const productListUL = document.querySelector('ul');
+        productListUL.remove();
+
+        let ul = document.createElement('ul');
+        let bodyElement = document.querySelector('body');
+        bodyElement.appendChild(ul)
+
+        renderProducts(resultSearch);
+
+    } else if (inputName !== '', inputPrice !== '') {
+        let combinResultSearch = products
+            .filter((product) => {
+                if (inputPrice === '') {
+                    return true;
+                } else {
+                    return (product.price < inputPrice);
+                }
+            })
+            .filter(product => product.name.toLowerCase().includes(inputName));
+        
+        const productListUL = document.querySelector('ul');
+        productListUL.remove();
+
+        let ul = document.createElement('ul');
+        let bodyElement = document.querySelector('body');
+        bodyElement.appendChild(ul);
+
+        renderProducts(combinResultSearch);
+    } else {
+            
+        const productListUL = document.querySelector('ul');
+        productListUL.remove();
+
+        let ul = document.createElement('ul');
+        let bodyElement = document.querySelector('body');
+        bodyElement.appendChild(ul);
+
+        renderProducts(products);
+    }
 }
-
-
-document.getElementById('product').addEventListener('input', writeInput);
-
-function priceInput() {
-
-    let inputPrice = document.getElementById('price').value;
-    let resultSearch = writeInput()
-        .filter((product) => {
-            if (inputPrice === '') {
-                return true;
-            } else {
-                return (product.price < inputPrice)
-            }
-        });
-
-    const productListUL = document.querySelector('ul');
-    productListUL.remove();
-
-    let ul = document.createElement('ul');
-    let bodyElement = document.querySelector('body');
-    bodyElement.appendChild(ul)
-
-    renderProducts(resultSearch);
-
-}
-document.getElementById('price').addEventListener('input', priceInput);
+document.getElementById('price').addEventListener('input', getResult);
+document.getElementById('product').addEventListener('input', getResult);
