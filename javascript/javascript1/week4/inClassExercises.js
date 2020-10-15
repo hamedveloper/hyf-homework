@@ -88,30 +88,22 @@ console.log(formattedCreditCardObject);
 
 //////////////////////////////////////////////////////////////////Character frequencies
 
-const characters = [];
-
+const characters = {};
 
 function getCharacterFrequencies(words) {
-    for (let count = 1; count < words.length + 1; count++) {
-        var n = words.substring(count - 1, count);
-        var counter = 0;
-        for (let i = 1; i < words.length + 1; i++) {
-            if (n === words.substring(i - 1, i)) {
-                counter = counter + 1;
-            }
+    let letterInWord = words.split("")
+    
+    for (let count = 0; count < letterInWord.length; count++) {
+        if (letterInWord[count] in characters) {
+            characters[letterInWord[count]]+=1
+        } else {    
+            characters[letterInWord[count]]=1
         }
-        characters.push({
-            character: words.substring(count - 1, count),
-            count: counter,
-        });
     }
-}
+}    
+
 getCharacterFrequencies('happy');
 console.log(characters);
-
-/////////////////////////////////////////////////////////////////Palindromic substring
-
-//I will make this section in the following week
 
 //////////////////////////////////////////////////////////////////Credit card info
 
