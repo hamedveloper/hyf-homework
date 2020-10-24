@@ -103,13 +103,18 @@ CREATE TABLE IF NOT EXISTS `Mealsharing`.`Review` (
 ENGINE = InnoDB;
 
 INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (1, 'Very delicious pitza', 'the pitza was very delicious and nice', 1, 5, '2020-03-14');
-INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (2, 'awfull experience', 'the burger was not so good. It was dry and a littl ebit burned', 4, 1, '2020-11-19');
-INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (3, 'wow, great pasta', 'they have been made by themselves. It was an actual home made pasta. I really want to recommend it to others to try', 2, 5, '2021-03-03');
-INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (4, 'it was a real Kebab', 'the shape was not as a real Kebab should have, however the taste was acceptable', 5, 3, '2021-06-02');
-INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (5, 'very spicy burger', 'I have not expected so so much spicy taste. I should have think about it before to try', 4, 2, '2020-11-23');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (2, 'Awfull experience', 'the burger was not so good. It was dry and a littl ebit burned', 4, 1, '2020-11-19');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (3, 'Wow, great pasta', 'they have been made by themselves. It was an actual home made pasta. I really want to recommend it to others to try', 2, 5, '2021-03-03');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (4, 'It was a real Kebab', 'the shape was not as a real Kebab should have, however the taste was acceptable', 5, 3, '2021-06-02');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (5, 'Very spicy burger', 'I have not expected so so much spicy taste. I should have think about it before to try', 4, 2, '2020-11-23');
 INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (6, 'Very weird meal', 'I like it however it was very weird food for me. I did not imagin Dolme taste it like that', 3, 4, '2020-02-14');
-INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (7, 'a middle tast', 'I have tried several times a Dolmeh. I can not score this one a best but I was happy to try it', 3, 3, '2020-02-08');
-
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (9, 'It was a big Pitza', 'I could not finish whole of my Pitza. Regarding the price it was a big pitza', 1, 4, '2020-03-15');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (10, 'Oh It was fantastic', 'I have never ever tried such a delicious and watery Kebab. I highly recommend it', 5, 5, '2021-06-01');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (11, 'Not real a mexican Burger', 'I am a mexican who wanted to try a real mexican burger however was not sucssuful to ctach it at that event', 4, 2, '2020-11-20');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (12, 'Awfull experience', 'I face with a huge pain in my stomach after the event. Did they wash their hands when they wer preparing the psta for us?!!', 2, 1, '2021-03-06');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (13, 'It is an awsome experience to eat an Iranian food', 'Such an amazing food. I really want to learn how I can make it for my family.', 6, 5, '2020-10-15');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (14, 'That was a middle choise', 'The shpe and color was not pleasant. Drak brown food and watery. but the smell was nice', 6, 3, '2020-10-17');
+INSERT INTO Review (idReview, title, description, meal_id, stars, created_date) VALUES (15, 'a fantastic food', 'I can not score it more than 5 otherwise I did it. very recommended', 3, 5, '2020-02-14');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
