@@ -1,0 +1,19 @@
+[
+    {
+        "id" : 1,
+        "title" : "Indian food in the summer",
+        "maxNumberOfGuests" : 16,
+        "description" : "A nice night out eating delicious indian food",
+        "createdAt" : "2019/12/7 14:34",
+        "price" : 67
+    },
+    {
+        "id" : 2,
+        "title" : "Mexiacn Burger",
+        "maxNumberOfGuests" : 7,
+        "description" : "Very special and unforgotable spicy traditional mexiacn food",
+        "createdAt" : "2020/04/10 18:00",
+        "price" : 80
+    }
+]
+
