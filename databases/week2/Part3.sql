@@ -172,7 +172,7 @@ SELECT task.title, task.description, user.name, task.created
 FROM user_task
 JOIN user ON user_task.user_id=user.id
 JOIN task ON task.id=user_task.task_id
-WHERE user.name="Donald Duck" AND MONTH(task.created)="09";
+WHERE user.name="Maryrose Meadows" AND MONTH(task.created)="09";
 
 /*Find how many tasks where created in each month*/
 

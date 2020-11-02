@@ -41,10 +41,9 @@ SET status_id=3
 WHERE user_id=2;
 
 /*Mark a task as complete*/
-
-ALTER TABLE task ADD situation_mark nvarchar(50) NOT NULL; 
+ 
 UPDATE task
-SET situation_mark='Done'
+SET status_id='Done'
 WHERE status_id=3;
 
 /*Delete a task*/
