@@ -55,12 +55,13 @@ app.get("/large-meals", async (request, response) => {
 //..............................................random meal...............
 
 app.get("/meal", async (request, response) =>{
-    const randomMeal = meals
-        .filter(meal => meal["id"] === Math.floor(Math.random() * 2)+1)
+    
+    const mealWithReview = meals
         .map(meal => {
             meal.reviews = reviews.filter(review => review.mealId === meal.id);
             return meal;
         });
+    const randomMeal = mealWithReview[Math.floor(Math.random() * 2)];
     response.json(randomMeal);
 });
 
@@ -81,14 +82,16 @@ app.get("/reservations", async (request, response) => {
 
 app.get("/reservation", async (request, response) => {
 
-    const reservations = reservation
-        .filter(reservation => {
-            reservation.id = meals.filter(meal=>meal.id===reservation.mealId)
+    const reservationWithMeal = reservation
+        .map(reservation => {
+            reservation.meal = meals.filter(meal=>meal.id===reservation.mealId)
         return reservation;
-    });
-    
-    response.json(reservations);
+        });
+    const randomReservation=reservationWithMeal[Math.floor(Math.random() * 5)]
+        
+    response.json(randomReservation);
 });
+
 module.exports = app;
 
 
