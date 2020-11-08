@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "numberOfStars": 3,
+    "content": "Best meal ever",
+    "mealId": 1,
+    "createdAt": 12345
+  },
+  {
+    "id": 2,
+    "numberOfStars": 2,
+    "content": "I was not so happy with it",
+    "mealId": 1,
+    "createdAt": 23415
+  },
+  {
+    "id": 3,
+    "numberOfStars": 5,
+    "content": "Best mexican traditional burger",
+    "mealId": 1,
+    "createdAt": 10925
+  }
+
+]

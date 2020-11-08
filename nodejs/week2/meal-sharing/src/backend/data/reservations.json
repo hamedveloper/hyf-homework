@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Benjamin Hughes",
+    "email": "benjamin@hughes.dk",
+    "mealId": 1
+  },
+  {
+    "id": 2,
+    "name": "Hamed karchi",
+    "email": "hamed@gmal.dk",
+    "mealId": 2
+  },
+  {
+    "id": 3,
+    "name": "Ali Hughes",
+    "email": "bali@hes.dk",
+    "mealId": 3
+  },
+  {
+    "id": 4,
+    "name": "Aram Sabori",
+    "email": "ben@sabori.dk",
+    "mealId": 5
+  },
+  {
+    "id": 5,
+    "name": "Mari thomson",
+    "email": "in@yahoo.dk",
+    "mealId": 1
+  },
+  {
+    "id": 6,
+    "name": "ladan hosein",
+    "email": "ladan12@yahoo.dk",
+    "mealId": 4
+  },
+  {
+    "id": 7,
+    "name": "caren rasmussen",
+    "email": "crs@gmail.dk",
+    "mealId": 2
+  },
+  {
+    "id": 8,
+    "name": "Ali haghdos",
+    "email": "in@hgd.dk",
+    "mealId": 5
+  },
+  {
+    "id": 9,
+    "name": "Marta andish",
+    "email": "marta@hfoo.dk",
+    "mealId": 4
+  },
+  {
+    "id": 10,
+    "name": "Hadi Mkch",
+    "email": "had@yahoo.dk",
+    "mealId": 5
+  }
+]
