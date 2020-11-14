@@ -47,8 +47,7 @@ router.get("/", async (request, response) => {
   try {
 
 //...........................................Respond with the json for all the meals
-    //console.log(Object.keys(request.query).includes('maxPrice'));
-    
+     
     if (Object.keys(request.query).length === 0) {
     
       response.send(meals);
