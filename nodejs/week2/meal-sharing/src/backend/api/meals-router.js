@@ -11,14 +11,14 @@ router.get("/:id", async (request, response) => {
   try {
     // knex syntax for selecting things. Look up the documentation for knex for further info
     
-    const amountOfMeals = meals.length;
-    const realId = parseInt(request.params.id) - 1;
+    const realId = parseInt(request.params.id);
     const checkId = parseFloat(request.params.id);
+    const idMeals = meals.map(meal => meal.id);
     
     //...What if there is no meal with the requested id
 
-    if (!isNaN(request.params.id) && Number.isInteger(checkId) && 0 <= realId && realId < amountOfMeals) {
-      correspondAnswer = meals[realId];
+    if (idMeals.includes(checkId)) {
+      correspondAnswer = meals.filter(meal => meal.id === realId);
 
       //.....What if the users writes a string as id
 
@@ -32,7 +32,7 @@ router.get("/:id", async (request, response) => {
     } else if (!Number.isInteger(checkId)) {
       correspondAnswer = `Please select an integer id`;
 
-    } else correspondAnswer=`Please select a number between and equal to 1 and ${amountOfMeals }`;
+    } else correspondAnswer=`Please select a number through meal ID's : ${idMeals }`;
 
     response.send(correspondAnswer);
     
@@ -47,15 +47,14 @@ router.get("/", async (request, response) => {
   try {
 
 //...........................................Respond with the json for all the meals
-    //console.log(Object.keys(request.query).includes('maxPrice'));
-    
+     
     if (Object.keys(request.query).length === 0) {
     
       response.send(meals);
 
       //...........................................Get meals that has a price smaller than maxPrice	      
     
-    } else if (!isNaN(request.query.maxPrice) && request.query.maxPrice) {
+    } else if (!isNaN(request.query.maxPrice)) {
     
       const maxPrice = request.query.maxPrice;
       const limitedPriceMeal = meals.filter(meal => meal.price < maxPrice);
